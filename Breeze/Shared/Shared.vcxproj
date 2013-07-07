@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{704F1BB7-C325-494F-A023-310CEBC14676}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Shared</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>$(ProjectDir)..\ThirdParty\Windows\mysql\include;$(ProjectDir)Dependencies\JsonCpp\include;$(ProjectDir)Dependencies\JsonCpp\include\json;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)..\ThirdParty\Windows\mysql\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="Config\Game.json" />
+    <None Include="Dependencies\JsonCpp\src\lib_json\json_internalarray.inl" />
+    <None Include="Dependencies\JsonCpp\src\lib_json\json_internalmap.inl" />
+    <None Include="Dependencies\JsonCpp\src\lib_json\json_valueiterator.inl" />
+    <None Include="Dependencies\JsonCpp\src\lib_json\sconscript" />
+    <None Include="ReadMe.txt" />
+    <None Include="Serialization\Delegate.inl" />
+    <None Include="Utils\Singleton.inl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Db\MySQLConnection.cpp" />
+    <ClCompile Include="Db\ResultSet.cpp" />
+    <ClCompile Include="Dependencies\JsonCpp\src\lib_json\json_reader.cpp" />
+    <ClCompile Include="Dependencies\JsonCpp\src\lib_json\json_value.cpp" />
+    <ClCompile Include="Dependencies\JsonCpp\src\lib_json\json_writer.cpp" />
+    <ClCompile Include="Game\NetNodeId.cpp" />
+    <ClCompile Include="Net\Clock.cpp" />
+    <ClCompile Include="Net\Command.cpp" />
+    <ClCompile Include="Net\Ctx.cpp" />
+    <ClCompile Include="Net\Epoll.cpp" />
+    <ClCompile Include="Net\IOObject.cpp" />
+    <ClCompile Include="Net\IOThread.cpp" />
+    <ClCompile Include="Net\Mailbox.cpp" />
+    <ClCompile Include="Net\MySQLRPCClient.cpp" />
+    <ClCompile Include="Net\MySQLRPCServer.cpp" />
+    <ClCompile Include="Net\Object.cpp" />
+    <ClCompile Include="Net\Own.cpp" />
+    <ClCompile Include="Net\PollerBase.cpp" />
+    <ClCompile Include="Net\Select.cpp" />
+    <ClCompile Include="Net\Signaler.cpp" />
+    <ClCompile Include="Net\SocketBase.cpp" />
+    <ClCompile Include="Net\TcpConnecter.cpp" />
+    <ClCompile Include="Net\TcpListener.cpp" />
+    <ClCompile Include="Net\TcpSocket.cpp" />
+    <ClCompile Include="Net\Thread.cpp" />
+    <ClCompile Include="Net\ZmqConnecter.cpp" />
+    <ClCompile Include="Net\ZmqEngine.cpp" />
+    <ClCompile Include="Net\ZmqListener.cpp" />
+    <ClCompile Include="Serialization\ByteBuffer.cpp" />
+    <ClCompile Include="Serialization\Opcodes.cpp" />
+    <ClCompile Include="Serialization\ProtocolHead.cpp" />
+    <ClCompile Include="Utils\Character.cpp" />
+    <ClCompile Include="Utils\Guard.cpp" />
+    <ClCompile Include="Utils\MD5.cpp" />
+    <ClCompile Include="Utils\SpinLock.cpp" />
+    <ClCompile Include="Utils\Timer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Db\MySQLConnection.h" />
+    <ClInclude Include="Db\ResultSet.h" />
+    <ClInclude Include="Dependencies\JsonCpp\include\json\autolink.h" />
+    <ClInclude Include="Dependencies\JsonCpp\include\json\config.h" />
+    <ClInclude Include="Dependencies\JsonCpp\include\json\features.h" />
+    <ClInclude Include="Dependencies\JsonCpp\include\json\forwards.h" />
+    <ClInclude Include="Dependencies\JsonCpp\include\json\json.h" />
+    <ClInclude Include="Dependencies\JsonCpp\include\json\reader.h" />
+    <ClInclude Include="Dependencies\JsonCpp\include\json\value.h" />
+    <ClInclude Include="Dependencies\JsonCpp\include\json\writer.h" />
+    <ClInclude Include="Dependencies\JsonCpp\src\lib_json\json_batchallocator.h" />
+    <ClInclude Include="Game\NetNodeId.h" />
+    <ClInclude Include="Game\ServiceType.h" />
+    <ClInclude Include="Net\AtomicCounter.h" />
+    <ClInclude Include="Net\Clock.h" />
+    <ClInclude Include="Net\Command.h" />
+    <ClInclude Include="Net\Ctx.h" />
+    <ClInclude Include="Net\Epoll.h" />
+    <ClInclude Include="Net\Fd.h" />
+    <ClInclude Include="Net\IEngine.h" />
+    <ClInclude Include="Net\InitSock.h" />
+    <ClInclude Include="Net\IOObject.h" />
+    <ClInclude Include="Net\IOThread.h" />
+    <ClInclude Include="Net\IPollEvents.h" />
+    <ClInclude Include="Net\Mailbox.h" />
+    <ClInclude Include="Net\Mutex.h" />
+    <ClInclude Include="Net\MySQLRPCClient.h" />
+    <ClInclude Include="Net\MySQLRPCServer.h" />
+    <ClInclude Include="Net\Object.h" />
+    <ClInclude Include="Net\Own.h" />
+    <ClInclude Include="Net\Poller.h" />
+    <ClInclude Include="Net\PollerBase.h" />
+    <ClInclude Include="Net\Select.h" />
+    <ClInclude Include="Net\Signaler.h" />
+    <ClInclude Include="Net\SocketBase.h" />
+    <ClInclude Include="Net\TcpConnecter.h" />
+    <ClInclude Include="Net\TcpListener.h" />
+    <ClInclude Include="Net\TcpSocket.h" />
+    <ClInclude Include="Net\Thread.h" />
+    <ClInclude Include="Net\ZmqConnecter.h" />
+    <ClInclude Include="Net\ZmqEngine.h" />
+    <ClInclude Include="Net\ZmqListener.h" />
+    <ClInclude Include="Serialization\ByteBuffer.h" />
+    <ClInclude Include="Serialization\Delegate.h" />
+    <ClInclude Include="Serialization\IDelegate.h" />
+    <ClInclude Include="Serialization\Opcodes.h" />
+    <ClInclude Include="Serialization\ProtocolHead.h" />
+    <ClInclude Include="Utils\Character.h" />
+    <ClInclude Include="Utils\CommandBase.h" />
+    <ClInclude Include="Utils\Guard.h" />
+    <ClInclude Include="Utils\Lock.h" />
+    <ClInclude Include="Utils\MD5.h" />
+    <ClInclude Include="Utils\Noncopyable.h" />
+    <ClInclude Include="Utils\Singleton.h" />
+    <ClInclude Include="Utils\SpinLock.h" />
+    <ClInclude Include="Utils\Timer.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

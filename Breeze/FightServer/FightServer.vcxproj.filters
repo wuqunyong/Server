@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="FightApp">
+      <UniqueIdentifier>{18860522-0763-4158-82e6-e211a78d237a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SessionManager">
+      <UniqueIdentifier>{731986f4-a769-431b-9795-e4c382a09601}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="FightApp\FightApp.cpp">
+      <Filter>FightApp</Filter>
+    </ClCompile>
+    <ClCompile Include="SessionManager\SessionManager.cpp">
+      <Filter>SessionManager</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="FightApp\FightApp.h">
+      <Filter>FightApp</Filter>
+    </ClInclude>
+    <ClInclude Include="SessionManager\SessionManager.h">
+      <Filter>SessionManager</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

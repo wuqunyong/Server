@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="LoginApp\LoginApp.cpp">
+      <Filter>LoginApp</Filter>
+    </ClCompile>
+    <ClCompile Include="SessionManager\SessionManager.cpp">
+      <Filter>SessionManager</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerManager\PlayerManager.cpp">
+      <Filter>PlayerManager</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="LoginApp">
+      <UniqueIdentifier>{e73c9f42-fa1a-4120-924c-a96d815a249a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SessionManager">
+      <UniqueIdentifier>{da498ac1-1dc7-4fdf-b9b2-77ee2b032a8f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PlayerManager">
+      <UniqueIdentifier>{fabb74e7-eac9-4f92-ba96-45e64bab4b84}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="LoginApp\LoginApp.h">
+      <Filter>LoginApp</Filter>
+    </ClInclude>
+    <ClInclude Include="SessionManager\SessionManager.h">
+      <Filter>SessionManager</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerManager\PlayerManager.h">
+      <Filter>PlayerManager</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

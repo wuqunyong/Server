@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="RoleApp">
+      <UniqueIdentifier>{af315702-5fc9-4994-a532-cae750291617}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SessionManager">
+      <UniqueIdentifier>{1df8e3e0-d86a-448b-b1ec-3b57f06e2f4e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="RoleApp\RoleApp.cpp">
+      <Filter>RoleApp</Filter>
+    </ClCompile>
+    <ClCompile Include="SessionManager\SessionManager.cpp">
+      <Filter>SessionManager</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="RoleApp\RoleApp.h">
+      <Filter>RoleApp</Filter>
+    </ClInclude>
+    <ClInclude Include="SessionManager\SessionManager.h">
+      <Filter>SessionManager</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

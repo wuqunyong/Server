@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="GatewayApp">
+      <UniqueIdentifier>{4c974a67-cce5-4952-b089-4157db84ac8d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SessionManager">
+      <UniqueIdentifier>{fece8e71-b5ab-40c1-9ad9-49c8597e23e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GatewayAuthenticate">
+      <UniqueIdentifier>{9359e687-0137-4aed-9212-4ce17523a96b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="SessionManager\SessionManager.cpp">
+      <Filter>SessionManager</Filter>
+    </ClCompile>
+    <ClCompile Include="GatewayApp\GatewayApp.cpp">
+      <Filter>GatewayApp</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="GatewayAuthenticate\GatewayAuthenticate.cpp">
+      <Filter>GatewayAuthenticate</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="SessionManager\SessionManager.h">
+      <Filter>SessionManager</Filter>
+    </ClInclude>
+    <ClInclude Include="GatewayApp\GatewayApp.h">
+      <Filter>GatewayApp</Filter>
+    </ClInclude>
+    <ClInclude Include="GatewayAuthenticate\GatewayAuthenticate.h">
+      <Filter>GatewayAuthenticate</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

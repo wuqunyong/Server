@@ -1,0 +1,345 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="Dependencies\JsonCpp\src\lib_json\json_internalarray.inl">
+      <Filter>Dependencies\JsonCpp\src\lib_json</Filter>
+    </None>
+    <None Include="Dependencies\JsonCpp\src\lib_json\json_internalmap.inl">
+      <Filter>Dependencies\JsonCpp\src\lib_json</Filter>
+    </None>
+    <None Include="Dependencies\JsonCpp\src\lib_json\json_valueiterator.inl">
+      <Filter>Dependencies\JsonCpp\src\lib_json</Filter>
+    </None>
+    <None Include="Dependencies\JsonCpp\src\lib_json\sconscript">
+      <Filter>Dependencies\JsonCpp\src\lib_json</Filter>
+    </None>
+    <None Include="Utils\Singleton.inl">
+      <Filter>Utils</Filter>
+    </None>
+    <None Include="Serialization\Delegate.inl">
+      <Filter>Serialization</Filter>
+    </None>
+    <None Include="Config\Game.json">
+      <Filter>Config</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Db">
+      <UniqueIdentifier>{88e76e66-2c91-4ea0-bdf9-3e1d701071d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dependencies">
+      <UniqueIdentifier>{11759aef-f626-4246-9d17-33e92b3b7755}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dependencies\JsonCpp">
+      <UniqueIdentifier>{225e5cba-a48e-4b1b-a5ad-986ee185b370}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dependencies\JsonCpp\include">
+      <UniqueIdentifier>{e9c2e422-8d43-4a0d-9520-641312dbc614}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dependencies\JsonCpp\include\json">
+      <UniqueIdentifier>{33768674-499e-4757-9388-a0685333811d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dependencies\JsonCpp\src">
+      <UniqueIdentifier>{fdb26bfb-fe08-4b39-b19a-3555c5275d0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dependencies\JsonCpp\src\lib_json">
+      <UniqueIdentifier>{910051f0-581e-40a4-a20d-1ed2dfe5fae7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Serialization">
+      <UniqueIdentifier>{d25c5d3c-978c-425b-80d8-49cc9b81ef70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils">
+      <UniqueIdentifier>{20b0b664-3bfe-4f2e-b370-e80c0f1e6a7d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Net">
+      <UniqueIdentifier>{a46cd7ab-647f-4391-9328-6024fd7706b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Config">
+      <UniqueIdentifier>{c77c1e74-9bb6-4cb8-ade8-f2174915ef97}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game">
+      <UniqueIdentifier>{e614c08e-ea67-42a2-ab4c-a21e75cbabf7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Db\MySQLConnection.cpp">
+      <Filter>Db</Filter>
+    </ClCompile>
+    <ClCompile Include="Db\ResultSet.cpp">
+      <Filter>Db</Filter>
+    </ClCompile>
+    <ClCompile Include="Dependencies\JsonCpp\src\lib_json\json_reader.cpp">
+      <Filter>Dependencies\JsonCpp\src\lib_json</Filter>
+    </ClCompile>
+    <ClCompile Include="Dependencies\JsonCpp\src\lib_json\json_value.cpp">
+      <Filter>Dependencies\JsonCpp\src\lib_json</Filter>
+    </ClCompile>
+    <ClCompile Include="Dependencies\JsonCpp\src\lib_json\json_writer.cpp">
+      <Filter>Dependencies\JsonCpp\src\lib_json</Filter>
+    </ClCompile>
+    <ClCompile Include="Serialization\ByteBuffer.cpp">
+      <Filter>Serialization</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\Guard.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\SpinLock.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Net\Clock.cpp">
+      <Filter>Net</Filter>
+    </ClCompile>
+    <ClCompile Include="Net\Command.cpp">
+      <Filter>Net</Filter>
+    </ClCompile>
+    <ClCompile Include="Net\Ctx.cpp">
+      <Filter>Net</Filter>
+    </ClCompile>
+    <ClCompile Include="Net\Epoll.cpp">
+      <Filter>Net</Filter>
+    </ClCompile>
+    <ClCompile Include="Net\IOObject.cpp">
+      <Filter>Net</Filter>
+    </ClCompile>
+    <ClCompile Include="Net\IOThread.cpp">
+      <Filter>Net</Filter>
+    </ClCompile>
+    <ClCompile Include="Net\Mailbox.cpp">
+      <Filter>Net</Filter>
+    </ClCompile>
+    <ClCompile Include="Net\MySQLRPCClient.cpp">
+      <Filter>Net</Filter>
+    </ClCompile>
+    <ClCompile Include="Net\MySQLRPCServer.cpp">
+      <Filter>Net</Filter>
+    </ClCompile>
+    <ClCompile Include="Net\Object.cpp">
+      <Filter>Net</Filter>
+    </ClCompile>
+    <ClCompile Include="Net\PollerBase.cpp">
+      <Filter>Net</Filter>
+    </ClCompile>
+    <ClCompile Include="Net\Signaler.cpp">
+      <Filter>Net</Filter>
+    </ClCompile>
+    <ClCompile Include="Net\TcpListener.cpp">
+      <Filter>Net</Filter>
+    </ClCompile>
+    <ClCompile Include="Net\Thread.cpp">
+      <Filter>Net</Filter>
+    </ClCompile>
+    <ClCompile Include="Net\Select.cpp">
+      <Filter>Net</Filter>
+    </ClCompile>
+    <ClCompile Include="Net\TcpConnecter.cpp">
+      <Filter>Net</Filter>
+    </ClCompile>
+    <ClCompile Include="Net\TcpSocket.cpp">
+      <Filter>Net</Filter>
+    </ClCompile>
+    <ClCompile Include="Net\ZmqEngine.cpp">
+      <Filter>Net</Filter>
+    </ClCompile>
+    <ClCompile Include="Net\Own.cpp">
+      <Filter>Net</Filter>
+    </ClCompile>
+    <ClCompile Include="Net\ZmqConnecter.cpp">
+      <Filter>Net</Filter>
+    </ClCompile>
+    <ClCompile Include="Net\ZmqListener.cpp">
+      <Filter>Net</Filter>
+    </ClCompile>
+    <ClCompile Include="Net\SocketBase.cpp">
+      <Filter>Net</Filter>
+    </ClCompile>
+    <ClCompile Include="Serialization\ProtocolHead.cpp">
+      <Filter>Serialization</Filter>
+    </ClCompile>
+    <ClCompile Include="Serialization\Opcodes.cpp">
+      <Filter>Serialization</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\Timer.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\NetNodeId.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\MD5.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\Character.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Db\MySQLConnection.h">
+      <Filter>Db</Filter>
+    </ClInclude>
+    <ClInclude Include="Db\ResultSet.h">
+      <Filter>Db</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\JsonCpp\include\json\autolink.h">
+      <Filter>Dependencies\JsonCpp\include\json</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\JsonCpp\include\json\config.h">
+      <Filter>Dependencies\JsonCpp\include\json</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\JsonCpp\include\json\features.h">
+      <Filter>Dependencies\JsonCpp\include\json</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\JsonCpp\include\json\forwards.h">
+      <Filter>Dependencies\JsonCpp\include\json</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\JsonCpp\include\json\json.h">
+      <Filter>Dependencies\JsonCpp\include\json</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\JsonCpp\include\json\reader.h">
+      <Filter>Dependencies\JsonCpp\include\json</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\JsonCpp\include\json\value.h">
+      <Filter>Dependencies\JsonCpp\include\json</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\JsonCpp\include\json\writer.h">
+      <Filter>Dependencies\JsonCpp\include\json</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\JsonCpp\src\lib_json\json_batchallocator.h">
+      <Filter>Dependencies\JsonCpp\src\lib_json</Filter>
+    </ClInclude>
+    <ClInclude Include="Serialization\ByteBuffer.h">
+      <Filter>Serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\CommandBase.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\Guard.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\Lock.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\Noncopyable.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\Singleton.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\SpinLock.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\AtomicCounter.h">
+      <Filter>Net</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\Clock.h">
+      <Filter>Net</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\Command.h">
+      <Filter>Net</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\Ctx.h">
+      <Filter>Net</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\Epoll.h">
+      <Filter>Net</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\Fd.h">
+      <Filter>Net</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\IOObject.h">
+      <Filter>Net</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\IOThread.h">
+      <Filter>Net</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\IPollEvents.h">
+      <Filter>Net</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\Mailbox.h">
+      <Filter>Net</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\Mutex.h">
+      <Filter>Net</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\MySQLRPCClient.h">
+      <Filter>Net</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\MySQLRPCServer.h">
+      <Filter>Net</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\Object.h">
+      <Filter>Net</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\Poller.h">
+      <Filter>Net</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\PollerBase.h">
+      <Filter>Net</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\Signaler.h">
+      <Filter>Net</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\TcpListener.h">
+      <Filter>Net</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\Thread.h">
+      <Filter>Net</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\InitSock.h">
+      <Filter>Net</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\Select.h">
+      <Filter>Net</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\TcpConnecter.h">
+      <Filter>Net</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\TcpSocket.h">
+      <Filter>Net</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\IEngine.h">
+      <Filter>Net</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\ZmqEngine.h">
+      <Filter>Net</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\Own.h">
+      <Filter>Net</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\ZmqConnecter.h">
+      <Filter>Net</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\ZmqListener.h">
+      <Filter>Net</Filter>
+    </ClInclude>
+    <ClInclude Include="Net\SocketBase.h">
+      <Filter>Net</Filter>
+    </ClInclude>
+    <ClInclude Include="Serialization\ProtocolHead.h">
+      <Filter>Serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="Serialization\IDelegate.h">
+      <Filter>Serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="Serialization\Delegate.h">
+      <Filter>Serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="Serialization\Opcodes.h">
+      <Filter>Serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\Timer.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\ServiceType.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\NetNodeId.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\MD5.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\Character.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

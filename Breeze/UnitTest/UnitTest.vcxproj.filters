@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="JsonCpp\JsonCpp.cpp">
+      <Filter>JsonCpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Serialization\Serialization.cpp">
+      <Filter>Serialization</Filter>
+    </ClCompile>
+    <ClCompile Include="MySQLDb\MySQLDb.cpp">
+      <Filter>MySQLDb</Filter>
+    </ClCompile>
+    <ClCompile Include="RPCMySQL\RPCMySQL.cpp">
+      <Filter>RPCMySQL</Filter>
+    </ClCompile>
+    <ClCompile Include="NetServer\NetServer.cpp">
+      <Filter>NetServer</Filter>
+    </ClCompile>
+    <ClCompile Include="NetClient\NetClient.cpp">
+      <Filter>NetClient</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="MySQLDb">
+      <UniqueIdentifier>{ba30c110-910e-4f0b-96c5-44c62a6debd5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="JsonCpp">
+      <UniqueIdentifier>{816b667e-f758-45e4-992f-9d124ec45563}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Serialization">
+      <UniqueIdentifier>{2e430800-e1d4-407f-8bee-d862f8f3d261}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RPCMySQL">
+      <UniqueIdentifier>{3d2a0a0b-5414-4b40-8838-5435c45ee865}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NetServer">
+      <UniqueIdentifier>{ff32b68f-90cb-4556-8641-802b651417c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NetClient">
+      <UniqueIdentifier>{d13752ac-b80c-4a74-bb77-fb333e3105cc}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="JsonCpp\JsonCpp.h">
+      <Filter>JsonCpp</Filter>
+    </ClInclude>
+    <ClInclude Include="Serialization\Serialization.h">
+      <Filter>Serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="MySQLDb\MySQLDb.h">
+      <Filter>MySQLDb</Filter>
+    </ClInclude>
+    <ClInclude Include="RPCMySQL\RPCMySQL.h">
+      <Filter>RPCMySQL</Filter>
+    </ClInclude>
+    <ClInclude Include="NetServer\NetServer.h">
+      <Filter>NetServer</Filter>
+    </ClInclude>
+    <ClInclude Include="NetClient\NetClient.h">
+      <Filter>NetClient</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

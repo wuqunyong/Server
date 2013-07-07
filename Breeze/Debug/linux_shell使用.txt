@@ -1,0 +1,5 @@
+./smd.sh start s1 这样启动
+./smd.sh stop s1终止
+./smd.sh stop s1终止
+
+s1 第几个服

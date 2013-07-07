@@ -1,0 +1,15 @@
+#ifndef __GAME_SERVICETYPE_H__
+#define __GAME_SERVICETYPE_H__
+
+#define SERVICE_CLIENT  1
+#define SERVICE_LOGIN   2
+#define SERVICE_GATEWAY 3
+#define SERVICE_ROLE    4
+#define SERVICE_GLOBAL  5
+#define SERVICE_FIGHT   6
+#define SERVICE_SCENE   7
+#define SERVICE_BACKEND 8
+#define SERVICE_DAEMON  9
+
+
+#endif

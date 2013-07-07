@@ -1,0 +1,47 @@
+/*
+ Copyright (c) 2007-2011 iMatix Corporation
+ Copyright (c) 2007-2011 Other contributors as noted in the AUTHORS file
+
+ This file is part of 0MQ.
+
+ 0MQ is free software; you can redistribute it and/or modify it under
+ the terms of the GNU Lesser General Public License as published by
+ the Free Software Foundation; either version 3 of the License, or
+ (at your option) any later version.
+
+ 0MQ is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU Lesser General Public License for more details.
+
+ You should have received a copy of the GNU Lesser General Public License
+ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+#ifndef __SHARED_NET_CLOCK_H__
+#define __SHARED_NET_CLOCK_H__
+
+#include <stdint.h>
+
+namespace FREEZE_NET
+{
+
+	class Clock
+	{
+	public:
+
+		Clock(void);
+		~Clock(void);
+
+		//  Low precision timestamp. In tight loops generating it can be
+		//  10 to 100 times faster than the high precision timestamp.
+		uint64_t NowMS(void);
+
+	private:
+		Clock(const Clock&);
+		const Clock& operator=(const Clock&);
+	};
+
+}
+
+#endif
