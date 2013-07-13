@@ -37,6 +37,8 @@ public:
 public:
 
 	bool Query(const char* sql, ResultSet* & ref_ptr_set, bool commit_flags = true);
+    //把2进制字符串转换为C风格的字符串
+    bool ConvertBinaryStrToCStr(const std::string& from, std::string& to);
 
 	uint32_t GetLastError(void)
 	{
@@ -56,10 +58,6 @@ private:
 	MYSQL *               mysql_;
 	MySQLConnectionInfo  connection_info_;
 	uint32_t  re_connect_count_;
-
-public:
-	//producer and one consumer
-	//std::queue<>
 };
 
 #endif

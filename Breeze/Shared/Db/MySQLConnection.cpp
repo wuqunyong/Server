@@ -3,6 +3,7 @@
 MySQLConnection::MySQLConnection(void)
 {
 	this->re_connect_count_ = 0;
+    this->mysql_ = NULL;
 }
 
 MySQLConnection::~MySQLConnection(void)
@@ -63,7 +64,8 @@ bool MySQLConnection::Query(const char* sql, ResultSet* & ref_ptr_set, bool comm
 	else
 	{
 		//如果查询成功，返回0。如果出现错误，返回非0值
-		if (mysql_query(this->mysql_, sql))
+		long len = strlen(sql);
+		if (mysql_real_query(this->mysql_, sql, len))
 		{
 			uint32_t last_errno = mysql_errno(this->mysql_);
 
@@ -120,6 +122,24 @@ bool MySQLConnection::Query(const char* sql, ResultSet* & ref_ptr_set, bool comm
 	return true;
 }
 
+bool MySQLConnection::ConvertBinaryStrToCStr(const std::string& from, std::string& to)
+{
+    if (this->mysql_ == NULL)
+    {
+        return false;
+    }
+
+    uint32_t file_len = 2*from.size() + 1;
+    char * chunk = new char [file_len];
+    unsigned long real_len = mysql_real_escape_string(this->mysql_, chunk, from.c_str(), from.size());
+
+    std::string str_image(chunk, real_len);
+    to = str_image;
+
+    delete [] chunk;
+
+    return true;
+}
 bool MySQLConnection::HandleMySQLErrno(uint32_t err_no)
 {
 	this->re_connect_count_++;

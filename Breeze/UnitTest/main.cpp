@@ -20,8 +20,8 @@ int main (int argc, char *argv [])
 	std::cout << "hello world !" << std::endl;
 
 
-	//UnitTestMySQL unit_test;
-	//unit_test.Run();
+	UnitTestMySQL unit_test;
+	unit_test.Run();
 
 	//UnitTestJsonCpp unit_test;
 	//unit_test.Run();
@@ -35,8 +35,8 @@ int main (int argc, char *argv [])
 	//UnitTestNetServer unit_test;
 	//unit_test.Run();
 
-	UnitTestNetClient unit_test;
-	unit_test.Run();
+	//UnitTestNetClient unit_test;
+	//unit_test.Run();
 
 	std::cout << "enter any key to end!" << std::endl;
 	std::string end;

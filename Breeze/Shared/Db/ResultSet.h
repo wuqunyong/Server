@@ -7,6 +7,22 @@
 #include <pthread.h>
 #endif
 
+////vs 2008
+//#ifdef _MSC_VER
+//
+//typedef __int8 int8_t;
+//typedef unsigned __int8 uint8_t;
+//typedef __int16 int16_t;
+//typedef unsigned __int16 uint16_t;
+//typedef __int32 int32_t;
+//typedef unsigned __int32 uint32_t;
+//typedef __int64 int64_t;
+//typedef unsigned __int64 uint64_t;
+//
+//#else
+//#include <stdint.h>
+//#endif
+
 #include <stdint.h>
 #include <stddef.h>
 
@@ -40,10 +56,12 @@ public:
 
 	bool operator>> (std::string& ref_value)
 	{
-		if ( (NULL == this->mysql_rows_) || (this->index_ >= this->num_fields_) )
+		if ( (NULL == this->mysql_rows_) || (NULL == this->lengths_) || (this->index_ >= this->num_fields_) )
 		{
 			return false;
 		}
+
+        uint32_t cur_index = this->index_;
 
 		const char* ptr_field = this->mysql_rows_[this->index_++];
 		if (NULL == ptr_field)
@@ -51,10 +69,40 @@ public:
 			return false;
 		}
 
-		ref_value = ptr_field;
+        unsigned long binary_len = lengths_[cur_index];
+
+		//ref_value = ptr_field;
+        std::string temp_str(ptr_field, binary_len);
+
+        ref_value = temp_str;
 
 		return true;
 	}
+
+    bool ExtractBLOB(std::string& ref_value)
+    {
+        if ( (NULL == this->mysql_rows_) || (NULL == this->lengths_) || (this->index_ >= this->num_fields_) )
+        {
+            return false;
+        }
+
+        uint32_t cur_index = this->index_;
+
+        const char* ptr_field = this->mysql_rows_[this->index_++];
+        if (NULL == ptr_field)
+        {
+            return false;
+        }
+
+        unsigned long binary_len = lengths_[cur_index];
+        std::string temp_str(ptr_field, binary_len);
+        
+        ref_value = temp_str;
+
+        std::cout << "ExtractBinaryString : " << binary_len << std::endl;
+        return true;
+
+    }
 
 private:
 	template <typename T>
@@ -65,11 +113,15 @@ private:
 			return false;
 		}
 
+        uint32_t cur_index = this->index_;
+
 		const char* ptr_field = this->mysql_rows_[this->index_++];
 		if (NULL == ptr_field)
 		{
 			return false;
 		}
+
+        unsigned long binary_len = lengths_[cur_index];
 
 		std::stringstream strbuf;
 		strbuf << ptr_field << std::endl;
@@ -88,6 +140,7 @@ protected:
 	uint32_t   num_fields_;
 	MYSQL_ROW  mysql_rows_;
 	MYSQL_RES* ptr_mysql_res_;
+    unsigned long *lengths_;
 };
 
 #endif
